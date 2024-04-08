@@ -21,6 +21,7 @@ Librerías necesarias:
 -	xml.etree.ElementTre
 -	shutil
 -	os
+
 Versiones Recomendadas:
 - conda conda 4.14.0
 - Python 3.9.18
