@@ -1,20 +1,29 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Propósito:
+El conversor de XML a CSV es una solución útil para quienes que necesitan transformar datos estructurados en XML en un formato de tabla como el CSV (Comma Separated Values).
+En el XML es complejo realizar búsquedas con múltiples filtros, por el contrario, al cargar un CSV en Excel, se pueden realizar análisis y procesamiento de datos de forma más eficiente.
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+# Funcionalidades
+- Listar los archivos XML: Verifica la carpeta XML_ENTRADA y lista los nombres de los archivos que tengan extensión .XML
+- Extraer Información del XML: Recorre la estructura de árbol definida para el XML, extrae los nombres y los valores de interés y los convierte en una fila.  Cada registro del XML se transforma de una fila de una tabla que termina en un DataFrame.
+- Guardar Resultados: Guarda el DataFrame de datos en formato CSV. Posteriormente, mueve el XML de la carpeta XML_ENTRADA a XML_PROCESADOS.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+# Forma de uso:
+- El programa esta diseñado para ser ejecutado únicamente pegando los XML a procesar, en la carpeta XML_ENTRADA, posteriormente se ejecuta el Python XML_A_CSV.py y se espera que termine para visualizar los resultados en la carpeta RESULTADOS. 
+- El CSV de salida queda con el mismo nombre del XML entrada, excepto por el cambio de formato.
+- El programa ha sido validado y funciona correctamente para transformar los XML a los que fue diseñado. Es importante considerar la configuración regional o el separador decimal en el equipo de cómputo para evitar pérdida de datos o lecturas erróneas del archivo CSV y sus decimales.
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+# Instalación:
+Es una carpeta portable, solo se requiere descargar y ejecutar el archivo XML_A_CSV.py en un ambiente de Python.
+Librerías necesarias:
+- numpy 
+-	pandas 
+-	datetime
+-	xml.etree.ElementTre
+-	shutil
+-	os
+Versiones Recomendadas:
+- conda conda 4.14.0
+- Python 3.9.18
+- ipython kernel –version  8.15.0
+- pandas Version: 1.3.4
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
