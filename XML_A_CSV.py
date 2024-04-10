@@ -29,18 +29,16 @@ class LeerXml(object):
 
         :return: None
         :rtype: TYPE
-
         """
-
         self.msg('Inicia Lectura de Archivos')
-        lista = [file for file in os.listdir(self.in_path)
-                if file.endswith('.xml')]
+        lista = [file for file in os.listdir(
+            self.in_path) if file.endswith('.xml')]
         if len(lista) == 0:
             self.msg('No se encontraron XML a procesar')
         else:
-            serie = pd.Series(lista)
             self.msg('Procesando XML ... ')
-            serie.apply(self.procesar_xml)
+            for file in lista:
+                self.procesar_xml(file)
 
     def procesar_xml(self, nombre):
         """
