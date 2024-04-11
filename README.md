@@ -28,3 +28,6 @@ Versiones Recomendadas:
 - ipython kernel –version  8.15.0
 - pandas Version: 1.3.4
 
+# LICENCE:
+[LICENCE](LICENCE)
+
